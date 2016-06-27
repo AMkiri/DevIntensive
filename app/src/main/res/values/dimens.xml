@@ -34,5 +34,7 @@
     <dimen name="font_size_h3_24">24sp</dimen>
     <dimen name="font_size_h4_16">16sp</dimen>
     <dimen name="font_size_h5_14">14sp</dimen>
+    <dimen name="line_size">2dp</dimen>
+    <dimen name="size_extra">104dp</dimen>
 
 </resources>

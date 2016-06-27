@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Мыскова Алина</string>
+    <string name="rate">Рейтинг</string>
+    <string name="code_strings">Написано строк кода</string>
+    <string name="projects">Проектов</string>
+    <string name="vk">Профиль в VK</string>
+    <string name="mobile">Мобильный телефон</string>
+    <string name="e_mail">E-mail</string>
+    <string name="git">Репозиторий</string>
+    <string name="about">О себе</string>
 </resources>
