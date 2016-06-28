@@ -36,5 +36,6 @@
     <dimen name="font_size_h5_14">14sp</dimen>
     <dimen name="line_size">2dp</dimen>
     <dimen name="size_extra">104dp</dimen>
+    <dimen name="avatar">60dp</dimen>
 
 </resources>
