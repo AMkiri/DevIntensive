@@ -14,20 +14,41 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
         android:theme="@style/AppTheme.AppBarOverlay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:theme="@style/AppTheme.PopupOverlay"
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapring_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/gray"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_profile_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_big"
+                android:fitsSystemWindows="true"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:theme="@style/AppTheme.PopupOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,6 +129,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content">
                     <EditText
+                        android:id="@+id/phone_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/text_data"
@@ -117,7 +139,6 @@
                         >
                     </EditText>
                 </android.support.design.widget.TextInputLayout>
-
             </LinearLayout>
             <ImageView
                 android:id="@+id/call_img"
@@ -143,6 +164,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content">
                     <EditText
+                        android:id="@+id/mail_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/text_data"
@@ -175,6 +197,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content">
                     <EditText
+                        android:id="@+id/vk_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/text_data"
@@ -193,7 +216,6 @@
             android:layout_width="wrap_content"
             style="@style/divider_line"/>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -208,6 +230,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content">
                     <EditText
+                        android:id="@+id/git_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/text_data"
@@ -240,6 +263,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content">
                     <EditText
+                        android:id="@+id/about_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/text_data"
@@ -255,6 +279,16 @@
     </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_create_black_24dp"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginRight="@dimen/fab_right_space"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
 
