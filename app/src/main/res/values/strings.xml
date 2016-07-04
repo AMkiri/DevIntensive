@@ -8,4 +8,6 @@
     <string name="e_mail">E-mail</string>
     <string name="git">Репозиторий</string>
     <string name="about">О себе</string>
+    <string name="profile">Профиль</string>
+    <string name="team">Контакты</string>
 </resources>

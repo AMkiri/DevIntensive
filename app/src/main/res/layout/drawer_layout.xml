@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/space_normal_16"
+    android:paddingTop="@dimen/space_medial_24"
+    android:paddingStart="@dimen/space_normal_16"
+    android:paddingEnd="@dimen/space_normal_16"
+    android:paddingBottom="@dimen/space_small_8"
+    android:background="@drawable/header_bg">
+
+    <ImageView
+        android:layout_width="@dimen/avatar"
+        android:layout_height="@dimen/avatar"
+        android:layout_marginTop="@dimen/space_normal_16"
+        android:src="@drawable/avatar_small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_medium_56"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/user_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_h5_14"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="Мыскова Алина"/>
+
+        <TextView
+            android:id="@+id/user_email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_h5_14"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:text="a.myskova@yandex.ru"/>
+    </LinearLayout>
+
+</RelativeLayout>

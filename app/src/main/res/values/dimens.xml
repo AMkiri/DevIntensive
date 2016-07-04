@@ -7,6 +7,7 @@
     <dimen name="size_small_24">24dp</dimen>
     <dimen name="size_medium_56">56dp</dimen>
     <dimen name="size_large_72">72dp</dimen>
+    <dimen name="size_extra">112dp</dimen>
 
     <!-- Spaces -->
     <dimen name="space_small_8">8dp</dimen>
@@ -27,6 +28,10 @@
     <dimen name="icon_small">24dp</dimen>
     <dimen name="icon_large">40dp</dimen>
     <dimen name="button_height">36dp</dimen>
+    <dimen name="avatar">60dp</dimen>
+    <dimen name="line_size">2dp</dimen>
+    <dimen name="size_profile_image">256dp</dimen>
+    <dimen name="fab_right_space">8dp</dimen>
 
     <!-- Text -->
     <dimen name="font_size_h1_45">45sp</dimen>
@@ -34,7 +39,5 @@
     <dimen name="font_size_h3_24">24sp</dimen>
     <dimen name="font_size_h4_16">16sp</dimen>
     <dimen name="font_size_h5_14">14sp</dimen>
-    <dimen name="line_size">2dp</dimen>
-    <dimen name="size_extra">104dp</dimen>
 
 </resources>
