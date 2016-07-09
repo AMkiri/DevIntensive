@@ -22,4 +22,5 @@
     <string name="password">Пароль</string>
     <string name="enter">ВОЙТИ</string>
     <string name="remember_pass">Забыли пароль?</string>
+    <string name="permission_denied_error">Невозможно выполнить действие: нет разрешения на использование ресурсов</string>
 </resources>

@@ -187,8 +187,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.call_img:
-                // showProgress();
+                callContact();
                 break;
+            //// TODO: other intents
             case R.id.fab:
                 mCurrentEditMode = !mCurrentEditMode;
                 changeEditMode(mCurrentEditMode);
@@ -346,12 +347,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == ConstantManager.CAMERA_REQUEST_PERMISSION_CODE && grantResults.length == 2){
-            if (grantResults[0]==PackageManager.PERMISSION_GRANTED
-                    && grantResults[1]==PackageManager.PERMISSION_GRANTED){
-                loadPhotoFromCamera();
-            }
+        switch (requestCode){
+            case ConstantManager.CAMERA_REQUEST_PERMISSION_CODE:
+                if(grantResults.length != 2) break;
+                if (grantResults[0]==PackageManager.PERMISSION_GRANTED
+                        && grantResults[1]==PackageManager.PERMISSION_GRANTED){
+                    loadPhotoFromCamera();
+                } else {
+                    permissionDenied();
+                }
+                break;
+            case ConstantManager.CALL_REQUEST_PERMISSION_CODE:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    callContact();
+                } else {
+                    permissionDenied();
+                }
+            //// TODO: other intents
         }
+    }
+
+    private void permissionDenied() {
+        showSnackBar(getString(R.string.permission_denied_error));
     }
 
     private void loadPhotoFromGallery(){
@@ -442,5 +459,25 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 Uri.parse("package:" + getPackageName()));
 
         startActivityForResult(appSettingsIntent, ConstantManager.PERMISSION_REQUEST_SETTINGS);
+    }
+
+    private void callContact() {
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+            Intent dialIntent = new Intent(Intent.ACTION_CALL, Uri.parse(mUserPhone.getText().toString()));
+            startActivity(dialIntent);
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.CALL_PHONE
+            }, ConstantManager.CALL_REQUEST_PERMISSION_CODE);
+
+            Snackbar.make(mCoordinatorLayout, getString(R.string.check_permission_request_msg), Snackbar.LENGTH_LONG)
+                    .setAction(getString(R.string.check_permission_request_button), new View.OnClickListener(){
+
+                        @Override
+                        public void onClick(View v) {
+                            openApplicationSettings();
+                        }
+                    }).show();
+        }
     }
 }
