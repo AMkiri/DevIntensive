@@ -10,4 +10,13 @@
     <string name="about">О себе</string>
     <string name="profile">Профиль</string>
     <string name="team">Контакты</string>
+    <string name="user_profile.placeholder.image">Изменить фотографию профиля</string>
+    <string name="user_profile_dialog_gallery">Загрузить из галереи</string>
+    <string name="user_profile_dialog_shot">Сделать снимок</string>
+    <string name="user_profile_dialog_cancel">Отмена</string>
+    <string name="user_profile_dialog_title">Изменить фотографию профиля</string>
+    <string name="image_from_camera_error">Не удалось загрузить фото</string>
+    <string name="pick_image_from_gallery">Выберите фото</string>
+    <string name="check_permission_request_msg">Для корректной работы приложения необходимо разрешить работу с камерой и памятью</string>
+    <string name="check_permission_request_button">Разрешить</string>
 </resources>

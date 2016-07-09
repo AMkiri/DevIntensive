@@ -39,5 +39,6 @@
     <dimen name="font_size_h3_24">24sp</dimen>
     <dimen name="font_size_h4_16">16sp</dimen>
     <dimen name="font_size_h5_14">14sp</dimen>
+    <dimen name="placeholder_photo_size_90">90dp</dimen>
 
 </resources>

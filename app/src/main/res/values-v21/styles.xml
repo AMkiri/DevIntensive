@@ -10,4 +10,8 @@
         <item name="android:windowTranslucentStatus">true</item>
 
     </style>
+
+    <style name="placeholder_text_font">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>

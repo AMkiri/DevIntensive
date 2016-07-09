@@ -27,12 +27,40 @@
             app:contentScrim="@color/gray"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/size_profile_image"
-                android:scaleType="centerCrop"
-                android:src="@drawable/avatar_big"
-                android:fitsSystemWindows="true"/>
+                android:fitsSystemWindows="true">
+
+                <ImageView
+                    android:id="@+id/user_photo_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_profile_image"
+                    android:scaleType="centerCrop"
+                    />
+                <RelativeLayout
+                    android:id="@+id/profile_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_background"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/placeholder_text"
+                        android:text="@string/user_profile.placeholder.image"
+                        android:layout_above="@+id/photo_placeholder"/>
+                    <ImageView
+                        android:id="@+id/photo_placeholder"
+                        android:layout_width="@dimen/placeholder_photo_size_90"
+                        android:layout_height="@dimen/placeholder_photo_size_90"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/add_a_photo_48px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/space_large_56"/>
+                </RelativeLayout>
+            </FrameLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -45,240 +73,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_extra"
-            android:background="@color/gray"
-            android:orientation="horizontal"
-            android:padding="@dimen/space_normal_16">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.data"
-                    android:text="5"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.hint"
-                    android:text="@string/rate"/>
-            </LinearLayout>
-            <View
-                style="@style/divider_vertical"/>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="vertical">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.data"
-                    android:text="5"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.hint"
-                    android:text="@string/code_strings"/>
-            </LinearLayout>
-            <View
-                style="@style/divider_vertical"/>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.data"
-                    android:text="5"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/header.hint"
-                    android:text="@string/projects"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_call_black_24dp"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                style="@style/layout_data">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content">
-                    <EditText
-                        android:id="@+id/phone_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/text_data"
-                        android:inputType="phone"
-                        android:hint="@string/mobile"
-                        android:text="+7(904)3364604"
-                        >
-                    </EditText>
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                android:id="@+id/call_img"
-                style="@style/icon.right"
-                android:src="@drawable/ic_phone_in_talk_black_24dp"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            style="@style/divider_line"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_mail_black_24dp"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                style="@style/layout_data">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content">
-                    <EditText
-                        android:id="@+id/mail_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/text_data"
-                        android:inputType="textEmailAddress"
-                        android:hint="@string/e_mail"
-                        android:text="a.myskova@yandex.ru"/>
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_send_black_24dp"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            style="@style/divider_line"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/vk"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                style="@style/layout_data">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content">
-                    <EditText
-                        android:id="@+id/vk_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/text_data"
-                        android:inputType="textUri"
-                        android:hint="@string/vk"
-                        android:text="vk.com/alinablake"/>
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_visibility_black_24dp"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            style="@style/divider_line"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/git"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                style="@style/layout_data">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content">
-                    <EditText
-                        android:id="@+id/git_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/text_data"
-                        android:inputType="textUri"
-                        android:hint="@string/git"
-                        android:text="github.com/AMkiri/DevIntensive"/>
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_visibility_black_24dp"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            style="@style/divider_line"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_account_circle_black_24dp"/>
-            <LinearLayout
-                android:layout_height="wrap_content"
-                style="@style/layout_data">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content">
-                    <EditText
-                        android:id="@+id/about_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/text_data"
-                        android:inputType="text"
-                        android:hint="@string/about"
-                        android:text="Не могу не быть программистом."/>
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    </android.support.v4.widget.NestedScrollView>
+    <include layout="@layout/user_profile_content"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
