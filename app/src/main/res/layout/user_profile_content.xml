@@ -90,7 +90,6 @@
                         style="@style/text_data"
                         android:inputType="phone"
                         android:hint="@string/mobile"
-                        android:text="+7(904)3364604"
                         >
                     </EditText>
                 </android.support.design.widget.TextInputLayout>
@@ -124,8 +123,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_data"
                         android:inputType="textEmailAddress"
-                        android:hint="@string/e_mail"
-                        android:text="a.myskova@yandex.ru"/>
+                        android:hint="@string/e_mail" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -157,8 +155,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_data"
                         android:inputType="textUri"
-                        android:hint="@string/vk"
-                        android:text="vk.com/alinablake"/>
+                        android:hint="@string/vk"/>
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -190,8 +187,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_data"
                         android:inputType="textUri"
-                        android:hint="@string/git"
-                        android:text="github.com/AMkiri/DevIntensive"/>
+                        android:hint="@string/git" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -223,8 +219,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_data"
                         android:inputType="text"
-                        android:hint="@string/about"
-                        android:text="Не могу не быть программистом."/>
+                        android:hint="@string/about" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>

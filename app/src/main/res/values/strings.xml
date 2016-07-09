@@ -19,4 +19,7 @@
     <string name="pick_image_from_gallery">Выберите фото</string>
     <string name="check_permission_request_msg">Для корректной работы приложения необходимо разрешить работу с камерой и памятью</string>
     <string name="check_permission_request_button">Разрешить</string>
+    <string name="password">Пароль</string>
+    <string name="enter">ВОЙТИ</string>
+    <string name="remember_pass">Забыли пароль?</string>
 </resources>

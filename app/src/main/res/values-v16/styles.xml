@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="placeholder_text_font">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="text_data">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+</resources>
