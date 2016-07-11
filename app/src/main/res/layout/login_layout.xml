@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/space_larger_72"
+        android:layout_marginRight="@dimen/space_larger_72"
+        android:padding="@dimen/login_window_padding_28"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/login_accent"
+            android:textSize="@dimen/font_size_h3_24"
+            android:text="@string/enter"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_16">
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/text_data.login"
+                android:inputType="textEmailAddress"
+                android:hint="@string/e_mail"
+                android:text="a.myskova@yandex.ru"
+                >
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_data.login"
+            android:inputType="textWebPassword"
+            android:hint="@string/password"
+            >
+        </EditText>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="@dimen/size_extra"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="@dimen/login_window_padding_28"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/font_size_h4_16"
+            android:textColor="@color/white"
+            android:text="@string/enter"
+            />
+
+        <TextView
+            android:id="@+id/remember_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_16"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/gray_light"
+            android:text="@string/remember_pass"/>
+
+    </LinearLayout>
+</LinearLayout>
